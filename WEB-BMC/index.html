@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1e3a8a">
+  <title>Media Ajar Interaktif — Perencanaan Ide Bisnis</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #1e3a8a;
+      --blue: #2563eb;
+      --light-blue: #60a5fa;
+      --gold: #fbbf24;
+      --ink: #172554;
+      --muted: #64748b;
+      --paper: #f5f8ff;
+      --green: #15803d;
+      --red: #b91c1c;
+      --shadow: 0 14px 40px rgba(30, 58, 138, .10);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Inter", sans-serif;
+      line-height: 1.65;
+    }
+
+    button, a { font: inherit; }
+    button { cursor: pointer; }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid #e5eaf5;
+      background: rgba(255, 255, 255, .94);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      color: var(--navy);
+      font-family: "Poppins", sans-serif;
+      font-weight: 800;
+    }
+
+    .brand span { color: var(--blue); }
+    .nav-links { display: flex; gap: 22px; }
+
+    .nav-links a {
+      color: #475569;
+      text-decoration: none;
+      font-size: .9rem;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover { color: var(--blue); }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 82px 0 78px;
+      color: white;
+      background: linear-gradient(125deg, #1e3a8a 0%, #2563eb 58%, #60a5fa 100%);
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .1);
+      pointer-events: none;
+    }
+
+    .hero::before {
+      width: 360px;
+      height: 360px;
+      right: -70px;
+      top: -155px;
+    }
+
+    .hero::after {
+      width: 210px;
+      height: 210px;
+      right: 19%;
+      bottom: -145px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 790px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 7px 13px;
+      border: 1px solid rgba(255, 255, 255, .35);
+      border-radius: 99px;
+      background: rgba(255, 255, 255, .12);
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+    }
+
+    h1, h2, h3 { font-family: "Poppins", sans-serif; line-height: 1.2; }
+
+    h1 {
+      max-width: 800px;
+      margin: 0 0 16px;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0;
